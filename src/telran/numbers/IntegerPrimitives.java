@@ -95,9 +95,7 @@ public class IntegerPrimitives {
 	}
 
 	public static int getLengthLong() {
-		int res=getLength(getMaxLong());
-		//System.out.println("longLength="+res);
-		return res;
+		return getLength(getMaxLong())-1;
 	}
 
 	/**
@@ -109,12 +107,12 @@ public class IntegerPrimitives {
 	private static int getLength(long x) {
 		
 		int  count=0;
-		while(x>=128) {
-			x=x/128;
+		while(x>=getMaxByte()) {
+			x=x/getMaxByte();
 			count++;
-			System.out.println(count);
+			//System.out.println(count);
 		}
-
+		System.out.println(count);
 		return count;
 	}
 
