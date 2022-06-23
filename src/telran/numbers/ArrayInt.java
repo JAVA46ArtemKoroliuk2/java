@@ -32,7 +32,7 @@ public class ArrayInt {
 		
      	System.arraycopy(ar, 0, res, 0, index);
 		System.arraycopy(ar, index, res, index+1, ar.length-index);
-		System.out.println(res);
+		System.out.println(res); //no need println, you have tests
 		
 		
 		return res;
@@ -47,7 +47,7 @@ public class ArrayInt {
 		int res[]=new int[ar.length-1];
 		System.arraycopy(ar, 0, res, 0, index);
 		System.arraycopy(ar, index+1, res, index, ar.length-index-1);
-		System.out.println(res);
+		System.out.println(res); //no need println, you have tests
 		return res;
 		
 	}
