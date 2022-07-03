@@ -74,11 +74,11 @@ public class Strings {
 			sumAllIndexArray+=i;
 		}
 		for(int i=0;i<str1Array.length;i++) {
-			for(int j=0;j<str1Array.length;j++)
-			if(str1Array[i].equals(str2Array[j])) {
-				
+			int index=str1.indexOf(str2Array[i]);
+			if (index>=0) {
+				numbersOfSame+=index; 
 			}
-			numbersOfSame+=i; 
+			
 		}
 		if(sumAllIndexArray==numbersOfSame) {
 			res=true;
