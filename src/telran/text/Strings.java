@@ -67,6 +67,7 @@ public class Strings {
 		str2Array = str2.split("");
 		int sumAllIndexArray=0;
 		int numbersOfSame=0;
+		int b[]=new int[str2Array.length];
 		if(str1Array.length!=str2Array.length) {
 			//break;
 		}
@@ -75,9 +76,10 @@ public class Strings {
 		}
 		for(int i=0;i<str1Array.length;i++) {
 			int index=str1.indexOf(str2Array[i]);
-			if (index>=0) {
+			if (index>=0 && !includes(b,index)) {
+				b[i]=index;
 				numbersOfSame+=index; 
-			}
+			} 
 			
 		}
 		if(sumAllIndexArray==numbersOfSame) {
@@ -87,5 +89,13 @@ public class Strings {
 		System.out.println(numbersOfSame);
 		return res;
 
+	}
+	public static boolean includes(int arr[],int num) {
+		for(int i=0; i<arr.length;i++) {
+			if(arr[i]==num) {
+				return true;
+			}
+		}
+		return false;
 	}
 }
