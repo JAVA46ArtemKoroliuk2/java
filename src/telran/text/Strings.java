@@ -19,10 +19,10 @@ public class Strings {
 	public static int[] deepNoRepeatedCompare(String str1, String str2) {
 		int res[] = { 0, 0 };
 		String[] str1Array = null;
-		str1Array = str1.split("");
+		str1Array = str1.split("");//[YG] You don't need to apply split returning array of strings, but you should apply toCharArray from the classwork
 		String[] str2Array = null;
 		str2Array = str2.split("");
-		if (str1Array.length <= str2Array.length) {
+		if (str1Array.length <= str2Array.length) { //[YG] very complicated solution with unneeded loops
 			for (int i = 0; i < str1Array.length; i++) {
 				if (str1Array[i].equals(str2Array[i])) {
 					res[0]++;
@@ -69,8 +69,9 @@ public class Strings {
 		int numbersOfSame=0;
 		int b[]=new int[str2Array.length];
 		if(str1Array.length!=str2Array.length) {
-			//break;
+			//break; //[YG] return false
 		}
+		//[YG] very complicated solution
 		for(int i=0;i<str1Array.length;i++) {
 			sumAllIndexArray+=i;
 		}
