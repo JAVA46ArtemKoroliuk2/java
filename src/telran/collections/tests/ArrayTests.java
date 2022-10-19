@@ -82,6 +82,8 @@ class ArrayTests {
 	@Test
 	void isOneSwapTest() {
 		//TODO
+		System.out.println("d");
+
 	}
 
 }
